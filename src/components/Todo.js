@@ -2,7 +2,7 @@ import React from 'react';
 import TodoList from './TodoList'
 import InputBox from './Input';
 import { v4 as uuidv4 } from "uuid";
-
+import Header from './Header'
 class Todo extends React.Component {
   state = {
     todo: [
@@ -57,12 +57,16 @@ class Todo extends React.Component {
   }
 
   render() {
+    const { todo } = this.state;
     return (
       <div className = 'Todo' >
-      <InputBox add = {this.addTodo.bind(this)} />
-      <TodoList click = {this.changeState.bind(this)} todos={this.state.todo} deleteTodo = {this.deleteTodo.bind(this)} />
+        <div className="inner">
+          <Header />
+          <InputBox add = { this.addTodo.bind(this) } />
+          <TodoList click={ this.changeState.bind(this) } todos={ todo } deleteTodo={ this.deleteTodo.bind(this) } />
+        </div>
       </div>
-    )
+    );
   }
 }
 
