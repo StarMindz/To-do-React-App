@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class InputBox extends Component {
   constructor(props) {
@@ -26,7 +27,11 @@ class InputBox extends Component {
         <button type="submit" className="input-submit" onClick={() => {add(task);}} >Submit</button>
       </form>
     );
-  };
+  }
+}
+
+InputBox.propTypes = {
+  add: PropTypes.func.isRequired,
 }
 
 export default InputBox;
