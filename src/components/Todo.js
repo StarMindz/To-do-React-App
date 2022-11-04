@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-equals-spacing */ 
+/* eslint-disable react/jsx-equals-spacing */
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import TodoList from './TodoList';
@@ -33,30 +33,30 @@ class Todo extends React.Component {
     const task = {
       id: uuidv4(),
       title: text,
-      check: false
+      check: false,
     };
     this.setState((state) => ({ todo: [...state.todo, task] }));
   }
 
   changeState(id) {
     this.setState((state) => ({
-      todo: state.todo.map(todo => {
+      todo: state.todo.map((todo) => {
         if (todo.id === id) {
           return {
             ...todo,
             check: !todo.check,
           };
         }
-        return todo
+        return todo;
       }),
     }));
   }
 
   deleteTodo(id) {
     this.setState((state) => ({
-      todo: [...state.todo.filter(todo => {
+      todo: [...state.todo.filter((todo) => {
         return todo.id !== id;
-      })]
+      })],
     }));
   }
 

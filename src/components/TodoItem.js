@@ -13,12 +13,12 @@ const TodoItem = (props) => {
   const { click, item, deleteTodo } = props;
 
   return (
-    <li className={styles.item} id={item.id} >
+    <li className={styles.item} id={item.id}>
       <input type="checkbox" className={styles.checkbox} checked={item.check} onChange={() => click(item.id)} />
       <span style={item.check ? completedStyle : null}>
         { item.title }
       </span>
-      <button type='submit' onClick={ () => {deleteTodo(item.id);} }>Delete</button>
+      <button type='submit' onClick={() => { deleteTodo(item.id); }}>Delete</button>
     </li>
   );
 };
@@ -27,6 +27,6 @@ TodoItem.propTypes = {
   click: PropTypes.func.isRequired,
   item: PropTypes.shape({ root: PropTypes.string.isRequired }),
   deleteTodo: PropTypes.func.isRequired,
-}
+};
 
 export default TodoItem;
