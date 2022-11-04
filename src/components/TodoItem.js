@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './stylings/TodoItem.module.css';
 import PropTypes from 'prop-types';
+import styles from './stylings/TodoItem.module.css';
 
 const TodoItem = (props) => {
   const completedStyle = {
@@ -18,14 +18,14 @@ const TodoItem = (props) => {
       <span style={item.check ? completedStyle : null}>
         { item.title }
       </span>
-      <button onClick={() => {deleteTodo(item.id);}}>Delete</button>
+      <button type='submit' onClick={ () => {deleteTodo(item.id);} }>Delete</button>
     </li>
   );
-}
+};
 
 TodoItem.propTypes = {
   click: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired,
+  item: PropTypes.shape({ root: PropTypes.string.isRequired }),
   deleteTodo: PropTypes.func.isRequired,
 }
 

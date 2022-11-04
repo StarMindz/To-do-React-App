@@ -24,7 +24,7 @@ class InputBox extends Component {
     return (
       <form className="form-container" onSubmit={this.noRefresh.bind(this)}>
         <input className="input-text" type="text" onChange={this.inputText.bind(this)} value={task} placeholder="Add todo ..." />
-        <button type="submit" className="input-submit" onClick={() => {add(task);}} >Submit</button>
+        <button type="submit" className="input-submit" onClick={ () => {add(task);} } >Submit</button>
       </form>
     );
   }
@@ -32,6 +32,6 @@ class InputBox extends Component {
 
 InputBox.propTypes = {
   add: PropTypes.func.isRequired,
-}
+};
 
 export default InputBox;

@@ -1,5 +1,5 @@
-const Header = () => {
-  return (
+/* eslint-disable arrow-body-style */ 
+const Header = () => { return (
     <header>
       <h1
         style={{
