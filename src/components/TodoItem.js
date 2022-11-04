@@ -19,7 +19,7 @@ const TodoItem = (props) => {
       <span style={item.check ? completedStyle : null}>
         { item.title }
       </span>
-      <button type='submit' onClick={() => { deleteTodo(item.id); }}>Delete</button>
+      <button type="submit" onClick={() => { deleteTodo(item.id); }}>Delete</button>
     </li>
   );
 };
