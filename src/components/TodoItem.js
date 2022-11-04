@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './stylings/TodoItem.module.css';
@@ -25,7 +26,6 @@ const TodoItem = (props) => {
 
 TodoItem.propTypes = {
   click: PropTypes.func.isRequired,
-  item: PropTypes.shape({ root: PropTypes.string.isRequired }),
   deleteTodo: PropTypes.func.isRequired,
 };
 

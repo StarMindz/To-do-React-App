@@ -1,6 +1,6 @@
 import React from 'react';
-import TodoItem from './TodoItem';
 import PropTypes from 'prop-types';
+import TodoItem from './TodoItem';
 
 const TodoList = (props) => {
   const { click, todos, deleteTodo } = props;
@@ -14,8 +14,7 @@ const TodoList = (props) => {
 
 TodoList.propTypes = {
   click: PropTypes.func.isRequired,
-  todos: PropTypes.object.isRequired,
   deleteTodo: PropTypes.func.isRequired,
-}
+};
 
 export default TodoList;

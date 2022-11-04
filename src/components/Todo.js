@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-equals-spacing */
+/* eslint-disable arrow-body-style */
+/* eslint-disable react/jsx-no-bind */
 import React from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import TodoList from './TodoList';
